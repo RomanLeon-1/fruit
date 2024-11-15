@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+	font-family: 'Jura';
+	src: url('/fonts/jura-regular.eot'); /* IE 9 Compatibility Mode */
+	src: url('/fonts/jura-regular.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('/fonts/jura-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		url('/fonts/jura-regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('/fonts/jura-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('/fonts/jura-regular.svg#jura-regular') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+
+
+body {
+  font-family: 'Jura', sans-serif;
+  background: #FFFFFF;
+  color: #292929;
+  height: 100vh;
+}
+
+
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 4.688rem 6.75rem;
+  width: 100%;
+}
+
+.logo {
+  color: #292929;
+  font-size: 1.5rem;
+  font-weight: 700;
+
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 4.375rem;
+  text-align: center;
+  align-items: center;
+  max-width: 583px;
+  width: 100%;
+  
+}
+
+.head h1 {
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #292929;
+  
+}
+
+
+
+.cart {
+  border: 1px solid #888888;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.5rem 0.9rem;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #838383;
+}
+
+.cart h1 {
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.063rem;
+  color: #838383;
+}
+
+main {
+  padding: 4.688rem 6.75rem;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3.25rem;
+}
+
+.fruit-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.fruit-img {
+  width: 100%;
+  height: 100%;
+}
+
+.love-logo {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+
+}
+
+.description {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  text-align: left;
+  align-items: center;
+}
+
+.cart-btn {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  border-radius: 50px;
+  border: 1px solid #888888;
+  padding: 0.5rem 0.9rem;
+}
+
+.cart-btn p {
+  color: #838383;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.name {
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #292929;
+
+}
+
+.price {
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #878787;
+}
+
+footer {
+  padding: 1.688rem 31.75rem;
+  margin-top: 81px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ABABAB;
+  background: #EDEDED;
+}
+
+@media (max-width: 1200px) {
+  .main-container {
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 2rem; 
+    padding: 0 1rem; 
+  }
+
+  .fruit-card {
+    padding: 1rem; 
+  }
+
+  header, main, footer {
+    padding: 1rem; 
+  }
+}
+
+
+@media (max-width: 768px) {
+  header {
+    padding: 1.5rem 2rem;
+  }
+
+  .head {
+    gap: 1rem;
+  }
+
+  .main-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer {
+    padding: 1rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  header {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .head {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100%;
+  }
+
+  .main-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+}
